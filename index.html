@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="璨儿的梦园">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://candreams.com/index.html">
 <meta property="og:site_name" content="璨儿的梦园">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="璨儿的梦园">
@@ -42,7 +42,7 @@
       </nav>
       <nav id="sub-nav">
         <div id="search-form-wrap">
-          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://candreams.com"></form>
         </div>
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
         
@@ -62,7 +62,7 @@
     <a href="/about/index.html" class="mobile-nav-link">About</a>
   
   <div id="search-form-wrap-mobile">
-    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://candreams.com"></form>
   </div>
 </nav>
       <div class="outer">
@@ -75,7 +75,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">十月 2016</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">3</span></li></ul>
     </div>
   </div>
 
@@ -85,6 +85,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/10/26/domain-for-github/">设定自己的GitHub域名</a>
+          </li>
         
           <li>
             <a href="/2016/10/26/post/">post</a>
@@ -122,6 +126,61 @@
         
         <section id="main">
   
+    <article id="post-domain-for-github" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/10/26/domain-for-github/" class="article-date">
+  <time datetime="2016-10-26T02:51:37.882Z" itemprop="datePublished">2016-10-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/10/26/domain-for-github/">设定自己的GitHub域名</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>1. 向你的 Github Pages 仓库添加一个CNAME(一定要</strong>大写<strong>)文件</strong>  </p>
+<p>其中只能包含一个顶级域名，像这样：  </p>
+<p><code><br>    example.com<br></code></p>
+<p>如果你是用 hexo 框架搭建博客并部署到 Github Pages 上，每次  </p>
+<pre><code>&gt; hexo g
+&gt; hexo d
+</code></pre><p>后会把你的博客所在目录下 public 文件夹里的东西都推到 Github Pages 仓库上，并且把 CNAME 文件覆盖掉，解决这个问题可以直接把 CNAME 文件添加到 public 文件夹里，这样每次推的时候就不用担心仓库里的 CNAME 文件被覆盖掉了。  </p>
+<p><strong>2. 向你的 DNS 配置中添加 3 条记录</strong>  </p>
+<pre><code>
+    @        A        192.30.252.153
+    @        A        192.30.252.154
+    www      CNAME    username.github.io.
+</code></pre>
+
+<p>用你自己的 Github 用户名替换 username  </p>
+<p>推荐使用 DNSPOD 的服务，使用国外的 DNS 解析服务可能有被墙的风险。  </p>
+<p>至于如何使用 DNSPOD 解析域名，参考<br><a href="//link.zhihu.com/?target=http%3A//jingyan.baidu.com/article/546ae1857c4ee81149f28cbe.html"><span class="invisible">http://</span><span class="visible">jingyan.baidu.com/artic</span><span class="invisible">le/546ae1857c4ee81149f28cbe.html</span><span class="ellipsis"></span></a>  </p>
+<p><strong>3. 等待你的 DNS 配置生效</strong>  </p>
+<p>对DNS的配置不是立即生效的，过10分钟再去访问你的域名看看有没有配置成功 : )</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://candreams.com/2016/10/26/domain-for-github/" data-id="ciuqcehtr0000jo92x141sok8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-post" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/10/26/post/" class="article-date">
@@ -148,7 +207,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/26/post/" data-id="ciuqbdlgh0001bc92rdg5or8a" class="article-share-link">Share</a>
+      <a data-url="http://candreams.com/2016/10/26/post/" data-id="ciuqcehu60002jo92nt919n4z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -196,7 +255,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/10/25/hello-world/" data-id="ciuqbdlg90000bc92qqd7e8mh" class="article-share-link">Share</a>
+      <a data-url="http://candreams.com/2016/10/25/hello-world/" data-id="ciuqcehu60001jo925o4hys7j" class="article-share-link">Share</a>
       
       
     </footer>
